@@ -1,11 +1,11 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 import styles from '../css/Frame_Container.module.css';
-import Title_Container from './Title_Container';
 
 export default function(){
     return (
         <div className={styles.frame}>
-            <Title_Container />
+            <Navbar />
         </div>
     );
 }
