@@ -1,11 +1,15 @@
 import React from 'react';
+import Spell_CardList from '../components/Spell_CardList';
+import Navbar_Container from './Navbar_Container';
 import styles from '../css/Frame_Container.module.css';
-import Title_Container from './Title_Container';
 
-export default function(){
-    return (
-        <div className={styles.frame}>
-            <Title_Container />
-        </div>
-    );
+export default class Frame_Container extends React.Component {
+    render() {
+        return (
+            <div className={styles.frame}>
+                <Navbar_Container />
+                <Spell_CardList />
+            </div>
+        );
+    }
 }
