@@ -1,0 +1,18 @@
+
+
+.spell_card_details {
+    width: 85%;
+    height: 65px;
+    background-color: aqua;
+}
+
+.spell_card_heart {
+    width: 15%;
+    height: 65px;
+    background-color: red;
+}
+
+.spell_card {
+    display: flex;
+    margin-top: 8px;
+}
