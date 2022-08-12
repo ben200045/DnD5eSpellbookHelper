@@ -6,8 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import Frame_Container from './containers/Frame_Container';
 import { App } from './components/App';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
   <div>
   <BrowserRouter>
