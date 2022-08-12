@@ -1,22 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, BrowserRouter, Outlet } from "react-router-dom";
 import styles from './css/index.css';
 import reportWebVitals from './reportWebVitals';
 import Frame_Container from './containers/Frame_Container';
+import { App } from './components/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <React.StrictMode>
   <div>
   <BrowserRouter>
   <div className={styles.frame_setup}>  
     <Routes>
-      <Route path="/" element={<Frame_Container />} />
+      <Route path="/" element={<App />} />
       <Route path="Favourites" element={<Frame_Container />} />
     </Routes>
-    </div>
+  </div>
+  <Outlet />
   </BrowserRouter>
   </div>
+  </React.StrictMode>
 );
 
 

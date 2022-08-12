@@ -13,9 +13,9 @@ code {
 }
 
 .frame_setup {
-  display: flex;
+    /* display: flex; */
     font-size: 9px;
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
