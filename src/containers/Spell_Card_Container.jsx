@@ -22,7 +22,7 @@ export default class Spell_CardList extends React.Component{
                     spell_cards: json,
                     
                 });
-                console.log(this.state.spell_cards);
+
             }).catch(err => {
             console.log(err);
         }
@@ -32,17 +32,18 @@ export default class Spell_CardList extends React.Component{
     
 
     render () {
-        
+
         const {spell_cards, isLoaded} = this.state;
         if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
             console.log(spell_cards.results);
+
         return(
             <div className={styles.spell_cardlist}>
                 {spell_cards.results.map(spell_card => (
                     <Spell_Card 
-                        key={spell_cards.results.index} 
+                    key={spell_cards.results.indexOf(spell_card)}
                         {...spell_card}
                     />
                 ))}
