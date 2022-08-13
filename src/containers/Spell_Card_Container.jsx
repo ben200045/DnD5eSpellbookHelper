@@ -19,22 +19,35 @@ export default class Spell_CardList extends React.Component{
             .then(json => {
                 this.setState({
                     isLoaded: true,
-                    spell_cards: json.cards,
+                    spell_cards: json,
+                    
                 });
+                console.log(this.state.spell_cards);
             }).catch(err => {
             console.log(err);
         }
         );
     }
 
+    
+
     render () {
+        
+        const {spell_cards, isLoaded} = this.state;
+        if (!isLoaded) {
+            return <div>Loading...</div>;
+        } else {
+            console.log(spell_cards.results);
         return(
             <div className={styles.spell_cardlist}>
-                {this.state.spell_cards.map(spell_card => ( 
-                <Spell_Card 
-                    
-                />))} );
+                {spell_cards.results.map(spell_card => (
+                    <Spell_Card 
+                        key={spell_cards.results.index} 
+                        {...spell_card}
+                    />
+                ))}
             </div>
         );
     }
+}
 }
