@@ -8,30 +8,61 @@ export default class Damage_Panel extends React.Component {
         super(props);
         this.state = {
             isLoaded: false,
-            
         }
     }
 
 
 
     render() {   
+        
+        const isDamage = () => {
+            if(this.props.damage_at_slot_level || this.props.damage_at_character_level) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
+        const damageType = () => {
+            if(isDamage()) 
+            {
+                if(this.props.damage_at_slot_level) {
+                    return true
+                } else {
+                    return false
+                }
+            } 
+            else 
+            {
+                return console.log('No damage');
+            }
+        }
+        
         return (
-            
-            <div className={styles.damage_panel} key={Object.keys(this.props.damage_at_slot_level)}>
+            <div className={styles.damage_panel}>
                 <div className={styles.damage_panel_header}>Damage</div>
-                {
-                    Object.keys(this.props.damage_at_slot_level).map((key) => {
+                {     
+                    isDamage() ?
+                    damageType() ? Object.keys(this.props.damage_at_slot_level).map((key) => {
                         return ( 
                         <Damage_Label 
                             key={key}
                             level={key}
                             damage={this.props.damage_at_slot_level[key]}
-                        />
-                        )
-                        
-                    }
-                    )
+                            />
+                        ) 
+                        }
+                    ) :  
+                    Object.keys(this.props.damage_at_character_level).map((key) => {
+                        return ( 
+                        <Damage_Label 
+                            key={key}
+                            level={key}
+                            damage={this.props.damage_at_character_level[key]}
+                            />
+                        ) 
+                        }
+                    ) : console.log('No damage')
                 }
 
             </div>
