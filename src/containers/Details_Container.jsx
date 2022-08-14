@@ -16,17 +16,17 @@ export default class Details_Container extends React.Component {
 
     componentDidMount(){
 
-        fetch('https://www.dnd5eapi.co/api/spells/acid-arrow')
-            .then(res => res.json())
-            .then(json => {
-                this.setState({
-                    isLoaded: true,
-                    spell_details: json, 
-                });
-            }).catch(err => {
-            console.log(err);
-        }
-        );
+        // fetch('https://www.dnd5eapi.co/api/spells/acid-arrow')
+        //     .then(res => res.json())
+        //     .then(json => {
+        //         this.setState({
+        //             isLoaded: true,
+        //             spell_details: json, 
+        //         });
+        //     }).catch(err => {
+        //     console.log(err);
+        // }
+        // );
     }
 
 
@@ -51,7 +51,7 @@ export default class Details_Container extends React.Component {
     render() {
         const {isLoaded} = this.state;
         if (!isLoaded) {
-            return <div>Loading...</div>;
+            return <div className={styles.details_container_ini}></div>;
         } else {
 
         return (

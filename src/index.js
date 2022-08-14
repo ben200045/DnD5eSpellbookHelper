@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route, BrowserRouter, Outlet } from "react-router-dom";
 import styles from './css/index.css';
 import reportWebVitals from './reportWebVitals';
-import Frame_Container from './containers/Frame_Container';
 import { App } from './components/App';
 import "typeface-cinzel";
 require('typeface-cinzel')
@@ -20,6 +19,7 @@ root.render(
       <Route path="favourites" element={<App favourites={true}/>} />
     </Routes>
   </div>
+  
   <Outlet />
   </BrowserRouter>
   </div>

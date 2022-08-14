@@ -10,15 +10,17 @@ export default class Description_Panel extends React.Component {
         }
     }
 
-    //TODO: make 'Description overlay?'
+
     render() {
         return (
             <div className={styles.description_panel}>
+                
                 {this.props.description.map((description, index) => 
                     {
                         return <p className={styles.description_panel_text} key={index}>{description}</p>
                     }
                 )}
+                <div className={styles.description_panel_img}></div>
 
 
             </div>

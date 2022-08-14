@@ -66,7 +66,7 @@ export default class Spell_Card_Container extends React.Component{
 
         const {spell_cards, isLoaded} = this.state;
         if (!isLoaded) {
-            return <div>Loading...</div>;
+            return <div className={styles.spell_cardlist_ini}>Loading...</div>;
         } else {
         return(
             <div className={styles.spell_cardlist}>

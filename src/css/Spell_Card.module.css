@@ -15,7 +15,9 @@
 
 .spell_card :hover {
     background-color: #FFF;
+    animation: fadeOut;
 }
+
 
 
 
@@ -31,6 +33,15 @@
     font-size: 22px;
 }
 
+.spell_card_heart:hover {
+    color: #C95656;
+    animation: fadeIn .5s;
+}
+
+
+
+
+
 .spell_card_heart {
     display: flex;
     flex-direction: column;
@@ -43,9 +54,23 @@
     cursor: pointer;
 }
 
+
+
 .spell_card {
     display: flex;
     flex-direction: row;
     margin-top: 8px;
+    animation: fadeIn 1.5s;
     
 }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes fadOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+    
+  }

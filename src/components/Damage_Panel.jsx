@@ -14,7 +14,7 @@ export default class Damage_Panel extends React.Component {
 
 
     render() {   
-        
+        //FIXME: this code is ugly, fix it
         const isDamage = () => {
             if(this.props.damage_at_slot_level || this.props.damage_at_character_level) {
                 return true;
@@ -40,7 +40,7 @@ export default class Damage_Panel extends React.Component {
         
         return (
             <div className={styles.damage_panel}>
-                <div className={styles.damage_panel_header}>Damage</div>
+                <div className={styles.damage_panel_header}>{this.props.damage_type ? "Damage" : null}</div>
                 {     
                     isDamage() ?
                     damageType() ? Object.keys(this.props.damage_at_slot_level).map((key) => {
@@ -62,7 +62,7 @@ export default class Damage_Panel extends React.Component {
                             />
                         ) 
                         }
-                    ) : console.log('No damage')
+                    ) : null
                 }
 
             </div>
