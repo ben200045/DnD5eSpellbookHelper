@@ -19,15 +19,14 @@ export default class Details_Panel extends React.Component {
                     <div className={styles.details_grid_item}>
                     Name: {this.props.name}<br/>
                     Range: {this.props.range}<br/>
-                    Damage Type: 
-                    {this.props.damage.damage_type ? 'yes' : 'no'}<br/> 
-                    Attack Type: {this.props.attack_type}<br/>
+                    Damage Type: {this.props.damage ? this.props.damage.damage_type.name : ' N/A '}<br/> 
+                    Attack Type: {this.props.damage ? this.props.attack_type : ' N/A '}<br/>
                     School: {this.props.school.name}<br/>
-                    Classes: {this.props.classes.map((class_, index) =>
+                    Classes: {this.props.classes.map((class_) =>
                         {
                             return class_.name
                         }).join(', ')}<br/>
-                    Subclasses: {this.props.subclasses.map((subclass, index) =>
+                    Subclasses: {this.props.subclasses.map((subclass) =>
                         {
                             return subclass.name
                         }).join(', ')}<br/>
