@@ -8,18 +8,13 @@ export default class Frame_Container extends React.Component {
 
     constructor(props){
         super(props);
-        this.props.favourites ? this.state = {spellURL: "/api/spells/acid-arrow",} : this.state = {spellURL: "",};
-        this.state = {
-            favouritedSpells: [],
-        }
-        
+        this.state = {spellURL: "",} 
+        this.state = {favouritedSpells: [],}
     }
     
     
 
     render() {
-
-
         const getSpellURL = (spellURL) => {
             this.setState({spellURL});
         }
