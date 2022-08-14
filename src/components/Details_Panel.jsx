@@ -20,7 +20,7 @@ export default class Details_Panel extends React.Component {
                     Name: {this.props.name}<br/>
                     Range: {this.props.range}<br/>
                     Damage Type: {this.props.damage ? this.props.damage.damage_type.name : ' N/A '}<br/> 
-                    Attack Type: {this.props.damage ? this.props.attack_type : ' N/A '}<br/>
+                    Attack Type: {this.props.attack_type ? this.props.attack_type : ' N/A '}<br/>
                     School: {this.props.school.name}<br/>
                     Classes: {this.props.classes.map((class_) =>
                         {
@@ -32,11 +32,11 @@ export default class Details_Panel extends React.Component {
                         }).join(', ')}<br/>
                     </div>
                     <div className={styles.details_grid_item}>
-                        Alignment: {this.props.alignment}<br/>
-                        Ritual: {this.props.ritual}<br/>
+                        Concentration: {this.props.concentration ? "True" : "False"}<br/>
+                        Ritual: {this.props.ritual ? 'True' : ' N/A '}<br/>
                         Duration: {this.props.duration}<br/>
                         Level: {this.props.level}<br/>
-                        Material: {this.props.material}<br/>
+                        Material: {this.props.material ? this.props.material : ' N/A '}<br/>
                     </div>
                 </div>    
             </div>

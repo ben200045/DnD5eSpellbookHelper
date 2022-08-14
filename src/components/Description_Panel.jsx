@@ -14,7 +14,6 @@ export default class Description_Panel extends React.Component {
     render() {
         return (
             <div className={styles.description_panel}>
-                <h3 className={styles.description_panel_text}>Description:</h3><hr/> 
                 {this.props.description.map((description, index) => 
                     {
                         return <p className={styles.description_panel_text} key={index}>{description}</p>
