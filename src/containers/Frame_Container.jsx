@@ -8,15 +8,14 @@ export default class Frame_Container extends React.Component {
 
     constructor(props){
         super(props);
+        this.props.favourites ? this.state = {spellURL: "/api/spells/acid-arrow",} : this.state = {spellURL: "/",};
         this.state = {
-            spellURL: "/api/spells/acid-arrow",
             favouritedSpells: [],
-            
         }
         
     }
     
-
+    
 
     render() {
 
@@ -37,9 +36,14 @@ export default class Frame_Container extends React.Component {
             <div className={styles.frame}>
                 <Navbar_Container />
                 <div className={styles.maincontent}>
+                    {this.props.favourites ? 
                     <Spell_CardList 
                         getSpellDetails={[getSpellURL,getFavouritedSpells]}
-                    />
+                    /> : 
+                    <Spell_CardList 
+                        getSpellDetails={[getSpellURL,getFavouritedSpells]}
+                    />}
+                    
                     <Details_Container
                         spellURL={this.state.spellURL}
                     />

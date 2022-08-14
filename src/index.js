@@ -15,8 +15,8 @@ root.render(
   <BrowserRouter>
   <div className={styles.frame_setup}>  
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="Favourites" element={<Frame_Container />} />
+      <Route path="/" element={<App favourites={false}/>} />
+      <Route path="favourites" element={<App favourites={true}/>} />
     </Routes>
   </div>
   <Outlet />

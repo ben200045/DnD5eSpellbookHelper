@@ -6,7 +6,7 @@ export class App extends React.Component {
     render() {
         return (
             <div className={styles.app}>
-                <Frame_Container />
+                <Frame_Container favourites={this.props.favourites} />
             </div>
         );
     }
