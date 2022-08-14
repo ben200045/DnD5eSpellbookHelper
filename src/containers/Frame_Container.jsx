@@ -5,12 +5,28 @@ import Details_Container from './Details_Container';
 import styles from '../css/Frame_Container.module.css';
 
 export default class Frame_Container extends React.Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            spellURL: '',
+        }
+    }
+
+
     render() {
+
+        const getSpellURL = (spellURL) => {
+            this.setState({spellURL});
+        }
+
         return (
             <div className={styles.frame}>
                 <Navbar_Container />
                 <div className={styles.maincontent}>
-                    <Spell_CardList />
+                    <Spell_CardList 
+                        getSpellURL={getSpellURL}
+                    />
                     <Details_Container />
                 </div>
             </div>

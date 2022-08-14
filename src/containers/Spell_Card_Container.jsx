@@ -2,7 +2,7 @@ import React from 'react';
 import Spell_Card from './Spell_Card';
 import styles from '../css/Frame_Container.module.css';
 
-export default class Spell_CardList extends React.Component{
+export default class Spell_Card_Container extends React.Component{
 
     constructor(props){
         super(props);
@@ -19,10 +19,8 @@ export default class Spell_CardList extends React.Component{
             .then(json => {
                 this.setState({
                     isLoaded: true,
-                    spell_cards: json,
-                    
+                    spell_cards: json, 
                 });
-
             }).catch(err => {
             console.log(err);
         }
@@ -32,6 +30,8 @@ export default class Spell_CardList extends React.Component{
     
 
     render () {
+
+
 
         const {spell_cards, isLoaded} = this.state;
         if (!isLoaded) {
@@ -45,6 +45,7 @@ export default class Spell_CardList extends React.Component{
                     <Spell_Card 
                     key={spell_cards.results.indexOf(spell_card)}
                         {...spell_card}
+                        getSpellURL={this.props.getSpellURL}
                     />
                 ))}
             </div>
