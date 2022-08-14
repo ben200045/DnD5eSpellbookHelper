@@ -39,7 +39,7 @@ export default class Spell_Card_Container extends React.Component{
                     <Spell_Card 
                     key={spell_cards.results.indexOf(spell_card)}
                         {...spell_card}
-                        getSpellURL={this.props.getSpellURL}
+                        getSpellDetails={this.props.getSpellDetails}
                     />
                 ))}
             </div>

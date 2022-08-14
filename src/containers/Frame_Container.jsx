@@ -10,22 +10,35 @@ export default class Frame_Container extends React.Component {
         super(props);
         this.state = {
             spellURL: "/api/spells/acid-arrow",
+            favouritedSpells: [],
+            
         }
+        
     }
+    
 
 
     render() {
 
-        const getSpellURL = (spellURL) => {
-            this.setState({spellURL});
+
+        const getSpellURL = (setSpellURL) => {
+            this.setState({setSpellURL});
+        }
+        
+        const getFavouritedSpells = (favouritedSpells) => {
+            this.setState({favouritedSpells});
+            const appendedList = this.state.favouritedSpells.concat(favouritedSpells);
+            this.setState({favouritedSpells: appendedList});
         }
 
+
         return (
+            
             <div className={styles.frame}>
                 <Navbar_Container />
                 <div className={styles.maincontent}>
                     <Spell_CardList 
-                        getSpellURL={getSpellURL}
+                        getSpellDetails={[getSpellURL,getFavouritedSpells]}
                     />
                     <Details_Container
                         spellURL={this.state.spellURL}

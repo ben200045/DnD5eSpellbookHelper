@@ -21,10 +21,15 @@ export default class Spell_Card extends React.Component {
 
     return (
         <div className={styles.spell_card}>
-            <Spell_Card_Details 
-                {...this.props}
+            <Spell_Card_Details
+                name={this.props.name}
+                url={this.props.url} 
+                getSpellURL={this.props.getSpellDetails[0]}
             />
-            <Spell_Card_Heart /> 
+            <Spell_Card_Heart 
+                getFavouritedSpell={this.props.getSpellDetails[1]}
+                url={this.props.url}
+            /> 
         </div>
     );
     
