@@ -17,20 +17,51 @@
     display: flex;
 }
 
-.details_header {
+.details_panel {
     width: 417px;
     height: 189px;
     background: #882121;
 }
 
-.damage_header {
+.details_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    width: 417px;
+    height: 189px;
+    background: #882121;
+}
+
+.damage_panel {
     width: 190px;
     height: 189px;
     background: #767676;
 }
 
-.details_description {
+.description_panel {
     width: 607px;
     height: 275px;
     background: #E8CD8A;
+    overflow-y: scroll;
 }
+
+.description_panel_text {
+    font-size: 12px;
+    color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0px 20px;
+}
+
+.description_panel_text > h3 {
+    font-size: 22px;
+}
+
+hr {
+    width: 95%;
+    height: 0.5px;
+    background: #000000;
+    opacity: 20%;
+}
+

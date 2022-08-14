@@ -1,4 +1,7 @@
 import React from 'react';
+import Damage_Panel from '../components/Damage_Panel';
+import Description_Panel from '../components/Description_Panel';
+import Details_Panel from '../components/Details_Panel';
 import styles from '../css/Details_Container.module.css';
 
 export default class Details_Container extends React.Component {
@@ -18,7 +21,7 @@ export default class Details_Container extends React.Component {
             .then(json => {
                 this.setState({
                     isLoaded: true,
-                    spell_cards: json, 
+                    spell_details: json, 
                 });
             }).catch(err => {
             console.log(err);
@@ -28,6 +31,7 @@ export default class Details_Container extends React.Component {
 
 
     componentDidUpdate(prevProps) {
+
         if (this.props.spellURL !== prevProps.spellURL) {
             this.setState({spellURL: this.props.spellURL});
             fetch('https://www.dnd5eapi.co'+ this.props.spellURL)
@@ -45,7 +49,7 @@ export default class Details_Container extends React.Component {
     }
 
     render() {
-        const {spell_details, isLoaded} = this.state;
+        const {isLoaded} = this.state;
         if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
@@ -53,14 +57,16 @@ export default class Details_Container extends React.Component {
         return (
             <div className={styles.details_container}>
                 <div className={styles.details_borderbox}>
-                    <div className={styles.details_header}>
-                    </div>
-                    <div className={styles.damage_header}>
-                    </div>
+                    <Details_Panel 
+                        {...this.state.spell_details}
+                    />
+                    <Damage_Panel 
+                        {...this.state.spell_details.damage}
+                    />
                 </div>
-                <div className={styles.details_description}>
-                    <b>Description:</b><br />
-                </div>
+                    <Description_Panel 
+                        description={this.state.spell_details.desc}
+                    />
             </div>
         );
     }

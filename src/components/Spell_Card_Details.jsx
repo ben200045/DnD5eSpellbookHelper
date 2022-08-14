@@ -31,7 +31,7 @@ export default class Spell_Card_Details extends React.Component {
 
     render () {
 
-
+        //TODO: change this to when hovering a spell description
 
         // const {spell_details, isLoaded} = this.state;
         // if (!isLoaded) {
@@ -41,9 +41,7 @@ export default class Spell_Card_Details extends React.Component {
 
         return (
             
-                <div className={styles.spell_card_details} onClick={
-                        () => this.props.getSpellURL(this.props.url)
-                    }>
+                <div className={styles.spell_card_details} onClick={() => this.props.getSpellURL(this.props.url)}>
                     {this.props.name}<br/>
                     {/* {spell_details.school.name}<br/>
                     {spell_details.classes.map(class_ => 
