@@ -9,7 +9,7 @@ export default class Frame_Container extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            spellURL: '',
+            spellURL: "/api/spells/acid-arrow",
         }
     }
 
@@ -27,7 +27,9 @@ export default class Frame_Container extends React.Component {
                     <Spell_CardList 
                         getSpellURL={getSpellURL}
                     />
-                    <Details_Container />
+                    <Details_Container
+                        spellURL={this.state.spellURL}
+                    />
                 </div>
             </div>
         );

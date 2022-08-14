@@ -27,18 +27,12 @@ export default class Spell_Card_Container extends React.Component{
         );
     }
 
-    
-
     render () {
-
-
 
         const {spell_cards, isLoaded} = this.state;
         if (!isLoaded) {
             return <div>Loading...</div>;
         } else {
-            console.log(spell_cards.results);
-
         return(
             <div className={styles.spell_cardlist}>
                 {spell_cards.results.map(spell_card => (

@@ -13,24 +13,16 @@ export default class Spell_Card extends React.Component {
         }
     }
 
-
-
     render() {
 
         // const getSpellURL = (spellURL) => {
         //     this.setState({spellURL});
         //   }
 
-
     return (
-
-
-
-
         <div className={styles.spell_card}>
             <Spell_Card_Details 
                 {...this.props}
-                // getSpellURL={getSpellURL}
             />
             <Spell_Card_Heart /> 
         </div>
