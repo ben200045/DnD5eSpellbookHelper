@@ -21,8 +21,8 @@ export default class Frame_Container extends React.Component {
     render() {
 
 
-        const getSpellURL = (setSpellURL) => {
-            this.setState({setSpellURL});
+        const getSpellURL = (spellURL) => {
+            this.setState({spellURL});
         }
         
         const getFavouritedSpells = (favouritedSpells) => {
