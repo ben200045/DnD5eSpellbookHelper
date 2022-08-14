@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../css/Details_Container.module.css';
+import Damage_Label from './Damage_Label';
 
 export default class Damage_Panel extends React.Component {
 
@@ -17,22 +18,22 @@ export default class Damage_Panel extends React.Component {
 
         return (
             
-            <div className={styles.damage_panel}>
+            <div className={styles.damage_panel} key={Object.keys(this.props.damage_at_slot_level)}>
+                <div className={styles.damage_panel_header}>Damage</div>
                 {
                     Object.keys(this.props.damage_at_slot_level).map((key) => {
-                        return (
-                            <div className={styles.damage_panel_item}>
-                                <div className={styles.damage_panel_item_header}>
-                                    {key}
-                                </div>
-                                <div className={styles.damage_panel_item_body}>
-                                    {this.props.damage_at_slot_level[key]}
-                                </div>
-                            </div>
+                        return ( 
+                        <Damage_Label 
+                            key={key}
+                            level={key}
+                            damage={this.props.damage_at_slot_level[key]}
+                        />
                         )
+                        
                     }
                     )
                 }
+
             </div>
         );
     }
