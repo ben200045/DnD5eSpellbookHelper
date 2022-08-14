@@ -26,7 +26,7 @@ export default class Spell_Card_Heart extends React.Component {
                         <img src={require('../images/heart_filled.png')} alt="heart"/> :
                         <img src={require('../images/heart_empty.png')} alt="heart"/>
                     } */}
-                </div>
+                ♥</div>
             </>
         );
     } 

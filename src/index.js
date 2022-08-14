@@ -5,7 +5,8 @@ import styles from './css/index.css';
 import reportWebVitals from './reportWebVitals';
 import Frame_Container from './containers/Frame_Container';
 import { App } from './components/App';
-
+import "typeface-cinzel";
+require('typeface-cinzel')
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

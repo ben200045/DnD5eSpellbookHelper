@@ -1,18 +1,51 @@
 
 
 .spell_card_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 85%;
     height: 65px;
-    background-color: aqua;
+    background-color: #FFF6A9;
+    font-family: Cinzel;
+    font-size: 22px;
+    cursor: pointer;
+    
+}
+
+.spell_card :hover {
+    background-color: #FFF;
+}
+
+
+
+.spell_card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 85%;
+    height: 65px;
+    background-color: #FFF6A9;
+    font-family: Cinzel;
+    font-size: 22px;
 }
 
 .spell_card_heart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 15%;
     height: 65px;
-    background-color: red;
+    font-size: 40px;
+    background-color: #C95656;
+    cursor: pointer;
 }
 
 .spell_card {
     display: flex;
+    flex-direction: row;
     margin-top: 8px;
+    
 }

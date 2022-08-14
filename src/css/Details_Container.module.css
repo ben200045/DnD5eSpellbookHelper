@@ -1,3 +1,5 @@
+
+
 .details_container {
     display: flex;
     flex-direction: column;
@@ -15,6 +17,7 @@
     height: 189px;
     background: #d56262;
     display: flex;
+    
 }
 
 .details_panel {
@@ -30,14 +33,21 @@
     grid-gap: 10px;
     width: 417px;
     height: 189px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
     background: #882121;
 }
 
+.details_grid_item {
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
 .damage_panel {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 10px;
+    display: flex;
+    flex-direction: column;
     width: 190px;
     height: 189px;
     background: #767676;
@@ -68,6 +78,10 @@
 }
 
 .description_panel {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
     width: 607px;
     height: 275px;
     background: #E8CD8A;
@@ -80,6 +94,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0px 20px;
+    font-family: Cinzel;
 }
 
 .description_panel_text > h3 {
@@ -91,5 +106,10 @@ hr {
     height: 0.5px;
     background: #000000;
     opacity: 20%;
+    margin: 2px 0px;
+}
+
+statname {
+    color: #000000;
 }
 
