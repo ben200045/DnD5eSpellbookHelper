@@ -11,8 +11,9 @@ export default class Spell_Card_Details extends React.Component {
     }
     render () {
         return (
+            
                 <div className={styles.spell_card_details} onClick={() => this.props.getSpellURL(this.props.url)}>
-                    {`-=- `+this.props.name}<br/>
+                    {this.props.name}<br/>
                 </div>
             
         );
