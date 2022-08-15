@@ -8,22 +8,23 @@ export default class NavHeader extends React.Component {
         super(props);    
     }
 
-
-
-
-    render() {
-        return (
-            <>
-                <div className={styles.nav_header_l}>
-                    <img src={logo}></img><div className={styles.header_font}>
-                    Dungeons and Dragons 5e Spellbook App</div>
-                </div>
-                    <Link className={styles.navbtn} to="/" onClick={() => false}>Spells</Link>
-                    <Link className={styles.navbtn} to="/favourites" onClick={() => true}>Favourites</Link>
-                <div className={styles.nav_header_r}>
-
-                </div>
-            </>
-        );
-    }
+	render() {
+		return (
+			<>
+				<div className={styles.nav_header_l}>
+					<img src={logo}></img>
+					<div className={styles.header_font}>
+						Dungeons and Dragons 5e Spellbook App
+					</div>
+				</div>
+				<Link className={styles.navbtn} to="/" onClick={() => false}>
+					Spells
+				</Link>
+				<Link className={styles.navbtn} to="/favourites" onClick={() => true}>
+					Favourites
+				</Link>
+				<div className={styles.nav_header_r}></div>
+			</>
+		);
+	}
 }
