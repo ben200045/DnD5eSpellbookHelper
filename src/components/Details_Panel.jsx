@@ -10,8 +10,6 @@ export default class Details_Panel extends React.Component {
         }
     }
 
-
-    //TODO: Conditional rendering on types of spell details | damage-type
     render() {
         return (
             <div className={styles.details_panel}>

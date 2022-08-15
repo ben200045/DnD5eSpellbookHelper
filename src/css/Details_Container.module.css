@@ -70,6 +70,10 @@
     background: #767676;
     overflow-y: auto;
     font-family: Cinzel;
+    background-image: url('../assets/DD-Transparent-Splash-15.png');
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position: center;
 }
 
 .damage_panel_header {
