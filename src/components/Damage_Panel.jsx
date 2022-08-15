@@ -14,7 +14,6 @@ export default class Damage_Panel extends React.Component {
 
 
     render() {   
-        //FIXME: this code is ugly, fix it
         const isDamage = () => {
             if(this.props.damage_at_slot_level || this.props.damage_at_character_level) {
                 return true;
@@ -22,6 +21,7 @@ export default class Damage_Panel extends React.Component {
                 return false;
             }
         }
+        
 
         const damageType = () => {
             if(isDamage()) 
