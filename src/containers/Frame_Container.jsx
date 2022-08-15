@@ -24,9 +24,10 @@ export default class Frame_Container extends React.Component {
 		};
 
 		const getFavouritedSpells = (favouritedSpell) => {
-			this.setState({ favouritedSpell });
 			const appendedList = this.state.favouritedSpells.concat(favouritedSpell);
-			appendedList.includes(favouritedSpell) ? console.log("true") : console.log("false");
+			appendedList.includes(favouritedSpell)
+				? console.log("true")
+				: console.log("false");
 			this.setState({ favouritedSpells: appendedList });
 		};
 

@@ -23,7 +23,7 @@ export default class NavHeader extends React.Component {
 						Dungeons and Dragons 5e Spellbook App
 					</div>
 				</div>
-				<Link className={styles.navbtn} to="/powerledgerapp" onClick={() => false}>
+				<Link className={styles.navbtn} to="/" onClick={() => false}>
 					Spells
 				</Link>
 				<Link className={styles.navbtn} to="/favourites" onClick={() => true}>

@@ -6,16 +6,19 @@
     justify-content: center;
     width: 85%;
     height: 65px;
+    background-image: linear-gradient(to left, #C95656 , #FFF6A9);
     background-color: #FFF6A9;
     font-family: Cinzel;
     font-size: 22px;
     cursor: pointer;
+    
     
 }
 
 .spell_card :hover {
     background-color: #FFF;
     animation: fadeOut;
+    
 }
 
 
@@ -36,11 +39,8 @@
 .spell_card_heart:hover {
     color: #C95656;
     animation: fadeIn .5s;
+    box-shadow: #C95656 0px 0px 10px;
 }
-
-
-
-
 
 .spell_card_heart {
     display: flex;
@@ -60,7 +60,11 @@
     display: flex;
     flex-direction: row;
     margin-top: 8px;
-    animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;   
+}
+
+.spell_card:hover {
+    box-shadow: #C95656 0px 0px 10px;
     
 }
 
@@ -71,6 +75,10 @@
 
   @keyframes fadOut {
     0% { opacity: 1; }
-    100% { opacity: 0; }
-    
+    100% { opacity: 0; }  
+  }
+
+  @keyframes fadeHover {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
   }

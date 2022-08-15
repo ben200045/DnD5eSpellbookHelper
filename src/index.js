@@ -15,7 +15,7 @@ root.render(
   <BrowserRouter>
   <div className={styles.frame_setup}>  
     <Routes>
-      <Route path="/powerledgerapp" element={<App favourites={false}/>} />
+      <Route path="/" element={<App favourites={false}/>} />
       <Route path="favourites" element={<App favourites={true}/>} />
     </Routes>
   </div>
