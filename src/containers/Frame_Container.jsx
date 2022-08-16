@@ -15,6 +15,8 @@ export default class Frame_Container extends React.Component {
 	}
 
 	render() {
+
+		
 		const getTabLocation = (tabLocation) => {
 			this.setState({ tabLocation });
 		};
@@ -23,14 +25,16 @@ export default class Frame_Container extends React.Component {
 			this.setState({ spellURL });
 		};
 
+		//TODO: this is a MESS
 		const getFavouritedSpells = (favouritedSpell) => {
 			const appendedList = this.state.favouritedSpells.concat(favouritedSpell);
-			appendedList.includes(favouritedSpell)
-				? console.log("true")
-				: console.log("false");
-			this.setState({ favouritedSpells: appendedList });
+			this.state.favouritedSpells.some((spell) => spell.name === favouritedSpell.name) && this.state.favouritesTab === false
+				? this.setState({favouritedSpells: this.state.favouritedSpells.filter((spell) => spell.name !== favouritedSpell.name),})
+				: this.setState({ favouritedSpells: appendedList })
 		};
 
+
+		
 		return (
 			<div className={styles.frame}>
 				<Navbar_Container getTabLocation={getTabLocation} />
