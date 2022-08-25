@@ -31,7 +31,7 @@ export default class Spell_Card_Container extends React.Component {
 	}
 
 	render() {
-		if (this.props.favourites && this.props.favouritedSpells.length == 0) {
+		if (this.props.favourites && this.props.favouritedSpells.length === 0) {
 			return <div className={styles.spell_cardlist_ini}>No Favourites yet</div>;
 		}
 

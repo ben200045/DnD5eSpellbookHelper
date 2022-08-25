@@ -1,24 +1,18 @@
 import React from "react";
 import styles from "../css/Spell_Card.module.css";
 
-export default class Spell_Card_Heart extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isFavourited: false,
-		};
-	}
+export default function Spell_Card_Heart(props) {
 
-	render() {
+
 		var obj = {
-			name: this.props.name,
-			url: this.props.url,
+			name: props.name,
+			url: props.url,
 		};
 		return (
 			<>
 				<div
 					className={styles.spell_card_heart}
-					onClick={() => this.props.getFavouritedSpell(obj)}
+					onClick={() => props.getFavouritedSpell(obj)}
 				>
 					{/* {this.props.isFavourited ? 
                         <div>♥</div> :
@@ -28,5 +22,5 @@ export default class Spell_Card_Heart extends React.Component {
 				</div>
 			</>
 		);
-	}
+	
 }
